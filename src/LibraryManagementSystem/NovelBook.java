@@ -10,7 +10,7 @@ public class NovelBook extends Book {
         this.genre = genre;
     }
     @Override
-    void displayBookDetails() {
+    public void displayBookDetails() {
         System.out.println("Novel Book Title: ");
     }
 }
