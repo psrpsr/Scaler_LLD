@@ -18,6 +18,7 @@ Challenge: Use encapsulation by keeping attributes private and accessing them th
     private String userId;
     private String name;
     private String contactInfo;
+    static int totalUsers;
 
     public String getName(){
         return name;
@@ -32,8 +33,11 @@ Challenge: Use encapsulation by keeping attributes private and accessing them th
     public void setcontactInfo(String contactInfo){
         this.contactInfo = contactInfo;
     }
-    public String generateUniqueId(){
+    public final String generateUniqueId(){
         return "";
+    }
+    public static int getTotalUsers(){
+        return totalUsers;
     }
     public User(){
         this.userId = generateUniqueId();
