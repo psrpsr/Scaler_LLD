@@ -6,7 +6,10 @@ public class Member extends User {
 
     @Override
     public void displayDashboard() {
-        System.out.println(this.getName()+" Dashboard Books Borrowed:"+this.borrowedBooksCount);
+        System.out.printf("Member Dashboard\n");
+        System.out.printf("Name: "+getName()+"\n");
+        System.out.println("Number of Books Borrowed: "+borrowedBooksCount);
+        //System.out.println(this.getName()+" Dashboard Books Borrowed:"+this.borrowedBooksCount);
     }
 
     @Override
@@ -18,6 +21,12 @@ public class Member extends User {
     }
 
     public Member(){
+        super();
+        borrowedBooksCount = 0;
+    }
+    public Member(String name, String contactInfor){
+        super(name, contactInfor);
+        borrowedBooksCount = 0;
 
     }
 }
