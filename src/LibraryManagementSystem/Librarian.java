@@ -4,7 +4,9 @@ import java.awt.print.Book;
 
 public class Librarian extends User{
     private String employeeNumber;
+public Librarian() {
 
+}
     @Override
     public void displayDashboard() {
         System.out.println("Librarian Dashboard "+this.employeeNumber);
