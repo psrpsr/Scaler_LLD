@@ -1,3 +1,5 @@
+package LibraryManagementSystem;
+
 import java.util.UUID;
 
 public abstract class User {
@@ -33,15 +35,15 @@ Challenge: Use encapsulation by keeping attributes private and accessing them th
     public String generateUniqueId(){
         return "";
     }
-     public User(){
+    public User(){
         this.userId = generateUniqueId();
-     }
+    }
 
-     public User(String newName, String newContactInfo){
+    public User(String newName, String newContactInfo){
         userId = generateUniqueId();
         this.name = newName;
         this.contactInfo = newContactInfo;
-     }
+    }
 
     public User(User otherUser){
         this.name = otherUser.name;
@@ -52,3 +54,4 @@ Challenge: Use encapsulation by keeping attributes private and accessing them th
     public abstract boolean canBorrowBooks();
 
 }
+
