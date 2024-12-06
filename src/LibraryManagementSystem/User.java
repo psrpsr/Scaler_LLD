@@ -3,18 +3,7 @@ package LibraryManagementSystem;
 import java.util.UUID;
 
 public abstract class User {
-    /*
 
-    Task 1: Create the Base User Class
-Objective: Introduce abstract classes, encapsulation, and basic object-oriented principles.
-Step 1.1: Define a class User with the following private attributes:
-String userId
-String name
-String contactInfo
-Step 1.2: Add getter and setter methods for name and contactInfo.
-Challenge: Use encapsulation by keeping attributes private and accessing them through getters/setters.
-
-     */
     private String userId;
     private String name;
     private String contactInfo;
@@ -34,6 +23,7 @@ Challenge: Use encapsulation by keeping attributes private and accessing them th
         this.contactInfo = contactInfo;
     }
     public final String generateUniqueId(){
+        totalUsers++;
         return "";
     }
     public static int getTotalUsers(){

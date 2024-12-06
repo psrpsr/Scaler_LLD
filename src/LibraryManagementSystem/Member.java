@@ -1,8 +1,18 @@
 package LibraryManagementSystem;
 
 public class Member extends User {
-    int borrowedBooksCount;
-    int MAX_BORROW_LIMIT = 5;
+    private int borrowedBooksCount;
+    private final static int MAX_BORROW_LIMIT = 5;
+
+    public Member(){
+        super();
+        borrowedBooksCount = 0;
+    }
+    public Member(String name, String contactInfor){
+        super(name, contactInfor);
+        borrowedBooksCount = 0;
+
+    }
 
     @Override
     public void displayDashboard() {
@@ -20,13 +30,5 @@ public class Member extends User {
         return false;
     }
 
-    public Member(){
-        super();
-        borrowedBooksCount = 0;
-    }
-    public Member(String name, String contactInfor){
-        super(name, contactInfor);
-        borrowedBooksCount = 0;
 
-    }
 }
